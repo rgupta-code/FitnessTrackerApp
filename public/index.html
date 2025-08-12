@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessTracker - Your Personal Fitness Journey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">💪 FitnessTracker</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+                <button class="nav-btn" data-tab="workouts">Workouts</button>
+                <button class="nav-btn" data-tab="progress">Progress</button>
+                <button class="nav-btn" data-tab="goals">Goals</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Dashboard Tab -->
+            <section id="dashboard" class="tab-content active">
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Total Workouts</h3>
+                        <div class="stat-number" id="total-workouts">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>This Week</h3>
+                        <div class="stat-number" id="week-workouts">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Current Streak</h3>
+                        <div class="stat-number" id="current-streak">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Calories Burned</h3>
+                        <div class="stat-number" id="total-calories">0</div>
+                    </div>
+                </div>
+                
+                <div class="recent-workouts">
+                    <h2>Recent Workouts</h2>
+                    <div id="recent-workouts-list" class="workout-list">
+                        <!-- Recent workouts will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workouts Tab -->
+            <section id="workouts" class="tab-content">
+                <div class="workout-header">
+                    <h2>Workouts</h2>
+                    <button class="btn btn-primary" id="add-workout-btn">+ Add Workout</button>
+                </div>
+                
+                <div id="workout-form" class="workout-form hidden">
+                    <h3>Log New Workout</h3>
+                    <form id="new-workout-form">
+                        <div class="form-group">
+                            <label for="workout-name">Workout Name</label>
+                            <input type="text" id="workout-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-date">Date</label>
+                            <input type="date" id="workout-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-duration">Duration (minutes)</label>
+                            <input type="number" id="workout-duration" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-calories">Calories Burned</label>
+                            <input type="number" id="workout-calories" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-notes">Notes</label>
+                            <textarea id="workout-notes" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Workout</button>
+                            <button type="button" class="btn btn-secondary" id="cancel-workout">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="all-workouts-list" class="workout-list">
+                    <!-- All workouts will be populated here -->
+                </div>
+            </section>
+
+            <!-- Progress Tab -->
+            <section id="progress" class="tab-content">
+                <h2>Progress Overview</h2>
+                <div class="chart-container">
+                    <canvas id="progress-chart"></canvas>
+                </div>
+            </section>
+
+            <!-- Goals Tab -->
+            <section id="goals" class="tab-content">
+                <div class="goals-header">
+                    <h2>Fitness Goals</h2>
+                    <button class="btn btn-primary" id="add-goal-btn">+ Add Goal</button>
+                </div>
+                
+                <div id="goal-form" class="goal-form hidden">
+                    <h3>Set New Goal</h3>
+                    <form id="new-goal-form">
+                        <div class="form-group">
+                            <label for="goal-title">Goal Title</label>
+                            <input type="text" id="goal-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="goal-target">Target Value</label>
+                            <input type="number" id="goal-target" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="goal-unit">Unit</label>
+                            <select id="goal-unit" required>
+                                <option value="workouts">Workouts per week</option>
+                                <option value="minutes">Minutes per week</option>
+                                <option value="calories">Calories per week</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Goal</button>
+                            <button type="button" class="btn btn-secondary" id="cancel-goal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="goals-list" class="goals-list">
+                    <!-- Goals will be populated here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Push-ups",
+    "category": "chest",
+    "equipment": "bodyweight"
+  },
+  {
+    "id": 2,
+    "name": "Squats",
+    "category": "legs",
+    "equipment": "bodyweight"
+  },
+  {
+    "id": 3,
+    "name": "Pull-ups",
+    "category": "back",
+    "equipment": "pull-up bar"
+  },
+  {
+    "id": 4,
+    "name": "Bench Press",
+    "category": "chest",
+    "equipment": "barbell"
+  },
+  {
+    "id": 5,
+    "name": "Deadlift",
+    "category": "back",
+    "equipment": "barbell"
+  },
+  {
+    "id": 6,
+    "name": "Shoulder Press",
+    "category": "shoulders",
+    "equipment": "dumbbells"
+  },
+  {
+    "id": 7,
+    "name": "Bicep Curls",
+    "category": "arms",
+    "equipment": "dumbbells"
+  },
+  {
+    "id": 8,
+    "name": "Tricep Dips",
+    "category": "arms",
+    "equipment": "bodyweight"
+  },
+  {
+    "id": 9,
+    "name": "Lunges",
+    "category": "legs",
+    "equipment": "bodyweight"
+  },
+  {
+    "id": 10,
+    "name": "Plank",
+    "category": "core",
+    "equipment": "bodyweight"
+  }
+]
